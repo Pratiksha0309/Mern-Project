@@ -25,6 +25,7 @@ const Login = () => {
   const { mutate: loginUser, isLoading: isLoggingIn } = useLogin({
     onSuccess: (response) => {
       toast.success('Login successful!');
+      console.log('response',response)
       setToken(response.token);
       localStorage.setItem('token', response.token);
     },

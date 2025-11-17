@@ -19,11 +19,11 @@ const Hero = () => {
       <div className="w-full">
         <Carousel autoplay dotPosition="bottom">
           {images.map((banner, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="">
               <img
                 src={banner.src}
                 alt={`Slide ${index + 1}`}
-                className="w-full md:h-[500px] object-cover brightness-75"
+                className="w-full md:h-[500px] object-cover"
               />
           
             </div>

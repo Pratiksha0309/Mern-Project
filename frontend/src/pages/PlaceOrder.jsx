@@ -9,7 +9,7 @@ const PlaceOrder = () => {
 
     const [method, setMethod] = useState('cod');
     const { navigate, backendUrl, token, cartItems, setCartItems, getCartAmount, delivery_fee, products } = useContext(ShopContext);
-
+    console.log('token',token)
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -22,7 +22,6 @@ const PlaceOrder = () => {
         phone: ''
     })
 
-    // ❌ Prevent direct access when cart is empty
     useEffect(() => {
         if (Object.keys(cartItems).length === 0) {
             navigate('/', { replace: true });
